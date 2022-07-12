@@ -1,0 +1,7 @@
+.btn{
+    padding: 1em 2em;
+    display: inline-block;
+    &-yellow{
+        background-color: $color-yellow;
+    }
+}

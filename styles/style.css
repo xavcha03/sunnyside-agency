@@ -46,6 +46,54 @@ table {
   border-spacing: 0; }
 
 body {
-  background-color: red; }
+  font-family: 'Barlow', sans-serif;
+  background-color: #49BCF1; }
+
+.btn {
+  padding: 1em 2em;
+  display: inline-block; }
+  .btn-yellow {
+    background-color: #FBD600; }
+
+.main-nav {
+  margin: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+  .main-nav__logo {
+    height: 24px; }
+  .main-nav__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 52px;
+    padding-bottom: 36px;
+    background-color: #F2F2F2; }
+    .main-nav__list::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -26px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 26px solid #F2F2F2;
+      border-left: 26px solid transparent; }
+  .main-nav__item {
+    width: 100%;
+    text-align: center; }
+  .main-nav__link {
+    display: inline-block;
+    padding: 1em 2em;
+    font-weight: 700;
+    text-decoration: none;
+    color: #808397;
+    border-radius: 40px; }
+  .main-nav:hover .main-nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
