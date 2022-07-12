@@ -7,7 +7,14 @@
     &__logo{
         height: 24px;
     }
- 
+
+    &__menuIcon{
+        cursor:pointer;
+        @include desktop-only{
+            display: none;
+        };
+    }
+
     &__list{
         display: none;
 
@@ -20,6 +27,19 @@
 
         background-color: $color-white;
 
+        @include mobile-only{
+            &-actif{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+            }
+        }
+
+        
+
+
+
         &::before{
             content :"";
             display: block;
@@ -31,6 +51,20 @@
             border-bottom: 26px solid $color-white;
             border-left: 26px solid transparent;
         }
+
+        @include desktop-only{
+            display: flex;
+            
+
+            position: static;
+            background-color: transparent;
+            margin:0;
+            padding: 0;
+
+            &::before{
+                display: none;
+            }
+        };
     }
 
     &__item{
@@ -47,23 +81,24 @@
         color:$color-grey;
 
         border-radius: 40px;
-    }
 
+        @include desktop-only{
+            font-weight: 700;
+        }
+    }
+    /*
     &:hover &__list{ //Quand on passe sur la nav
         
         display: flex;
         flex-direction: column;
         align-items: center;
         
+    }*/
+
+    @include desktop-only{
+        justify-content: space-between;
+            align-items: center;
     }
-
-
-
     
-
-   
-    
-
-
-
+ 
 }

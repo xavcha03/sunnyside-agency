@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap"
       rel="stylesheet"
     />
     <title>Sunny Side</title>
   </head>
   <body>
     <main class="container">
+      <!-- DEBUT Header => Logo + Menu-->
       <header class="topHeader">
         <nav class="main-nav">
           <img
@@ -22,8 +25,13 @@
             src="./assets//sunnyside.svg"
             alt="Sunny Side logo"
           />
-          <img src="./assets/navIcon.svg" alt="Icon" />
-          <ul class="main-nav__list">
+          <img
+            id="menuIcon"
+            class="main-nav__menuIcon"
+            src="./assets/navIcon.svg"
+            alt="Icon"
+          />
+          <ul id="mainMenu" class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">About</a>
             </li>
@@ -34,11 +42,50 @@
               <a class="main-nav__link" href="#">Projects</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link btn btn-yellow" href="#">Contact</a>
+              <a class="main-nav__link btn" href="#">Contact</a>
             </li>
           </ul>
         </nav>
       </header>
+      <!-- FIN Header => Logo + Menu-->
+
+      <!-- DEBUT HERO -->
+
+      <section id="mainHero" class="hero">
+        <article class="hero__content">
+          <h1 class="hero__title">We are creatives</h1>
+          <a class="hero__bottomLink" href="#">
+            <img
+              class="hero__arrow"
+              src="./assets/arrow_bottom.svg"
+              alt="Go down"
+            />
+          </a>
+        </article>
+      </section>
+
+      <!-- FIN HERO -->
+
+      <!-- DEBUT SERVICES -->
+      <section class="services">
+        <article class="services__content">
+          <img src="./assets/egg.jpg" alt="" />
+        </article>
+      </section>
+      <!-- FIN SERVICES -->
     </main>
   </body>
 </html>
+<script>
+  menuBtnElt = document.getElementById("menuIcon");
+  menuElt = document.getElementById("mainMenu");
+  console.log(menuBtnElt);
+  menuBtnElt.addEventListener(
+    "click",
+    function () {
+      console.log("click");
+      menuElt.classList.toggle("main-nav__list-actif");
+    },
+    false
+  );
+</script>
