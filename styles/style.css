@@ -45,19 +45,44 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 body {
-  font-family: 'Barlow', sans-serif;
-  font-size: 18px; }
+  font-family: "Barlow", sans-serif;
+  font-size: 16px; }
+
+.container {
+  width: 100%; }
+
+.underline {
+  position: relative; }
+  .underline::after {
+    content: '';
+    display: block;
+    right: -5px;
+    left: -5px;
+    height: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1; }
+  .underline-yellow::after {
+    background: rgba(250, 212, 0, 0.25); }
+  .underline-orange::after {
+    background: rgba(254, 119, 102, 0.25); }
+  .underline:hover .underline::after {
+    background: #fad400; }
 
 .btn {
   padding: 1em 2em;
   display: inline-block;
-  background-color: #FBD600;
+  background-color: #fad400;
   font-family: 'Fraunces', serif; }
   @media screen and (min-width: 480px) {
     .btn {
-      background-color: #F2F2F2;
-      color: #24303E !important; } }
+      background-color: white;
+      color: #19536b !important; } }
 
 .topHeader {
   position: absolute;
@@ -91,7 +116,7 @@ body {
     top: 100%;
     margin-top: 52px;
     padding-bottom: 36px;
-    background-color: #F2F2F2; }
+    background-color: white; }
     @media screen and (max-width: 480px) {
       .main-nav__list-actif {
         display: flex;
@@ -105,7 +130,7 @@ body {
       right: 0;
       width: 0;
       height: 0;
-      border-bottom: 26px solid #F2F2F2;
+      border-bottom: 26px solid white;
       border-left: 26px solid transparent; }
     @media screen and (min-width: 480px) {
       .main-nav__list {
@@ -153,10 +178,41 @@ body {
   .hero__title {
     font-size: 40px;
     font-weight: 900;
-    color: #F2F2F2;
+    color: white;
     letter-spacing: 6.25px;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Fraunces', serif; }
+
+.services {
+  display: flex;
+  flex-direction: column;
+  color: #5a636c;
+  text-align: center; }
+  @media screen and (min-width: 480px) {
+    .services {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  .services__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (min-width: 480px) {
+      .services__item {
+        width: 50%; } }
+    .services__item__img {
+      width: 100%; }
+    .services__item__title {
+      font-size: 32px;
+      font-weight: 900;
+      font-family: "Fraunces", serif;
+      margin: 24px; }
+    .services__item__link {
+      font-size: 15px;
+      font-family: font1;
+      text-decoration: none;
+      color: #818498;
+      font-weight: 900; }
 
 /*# sourceMappingURL=style.css.map */

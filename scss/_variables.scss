@@ -1,10 +1,28 @@
-//COLORS
+//---COLORS
+//Primary
 
 $color-blueSky: #49BCF1;
-$color-white:#F2F2F2;
 $color-grey:#808397;
-$color-yellow:#FBD600;
+$color-yellow: hsl(51, 100%, 49%);
 $color-darkBlue:#24303E;
+$color-orange:#FE7766;
+
+$color-softred:hsl(7, 99%, 70%);
+$color-darkDesaturateCyan: hsl(167, 40%, 24%);
+$color-darkBlue:hsl(198, 62%, 26%);
+$color-darkModerateCyan:hsl(168, 34%, 41%);
+//Secondary
+
+$color-veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+$color-veryDarkGrayishBlue: hsl(213, 9%, 39%);
+$color-darkGrayishBlue: hsl(232, 10%, 55%);
+$color-grayishBlue: hsl(210, 4%, 67%);
+$color-white: hsl(0, 0%, 100%);
+
+
+
+
+
 
 
 //breakPoint
@@ -12,3 +30,5 @@ $breakpoint-smartphone: 480px;
 
 
 //fonts
+$font1 : 'Fraunces', serif;
+$font2 : 'Barlow', sans-serif;

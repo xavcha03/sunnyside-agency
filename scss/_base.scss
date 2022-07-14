@@ -1,4 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 body{
-    font-family: 'Barlow', sans-serif;
-    font-size: 18px;
+    font-family: $font2;
+    font-size: 16px;
+    
+}
+
+.container{
+    width: 100%;
 }

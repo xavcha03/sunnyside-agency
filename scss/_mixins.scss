@@ -9,3 +9,7 @@
         @content;
     }
 }
+
+@mixin background-opacity($color, $opacity) {
+    background: rgba($color, $opacity);
+}
